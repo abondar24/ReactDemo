@@ -1,8 +1,9 @@
+import '../stylesheets/Footer.css';
 
 function Footer (){
   return (
     <footer>
-      <small>2022 Experimental development </small>
+      <small>Copyright (c) 2022 Experimental development </small>
     </footer>
 
   )

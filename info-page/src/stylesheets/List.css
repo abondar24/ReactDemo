@@ -1,0 +1,30 @@
+.list {
+  padding: 57px 27px;
+  color: white;
+  background-image: url(../images/react-logo-large.png);
+  background-repeat: no-repeat;
+  background-position: right 75%;
+
+}
+
+.list-header {
+  margin: 0;
+  font-size: 39px;
+  letter-spacing: -0.05em;
+  font-style: normal;
+
+}
+
+ul {
+  margin-top: 46px;
+}
+
+ul > li {
+  line-height: 19px;
+  padding-block: 5px;
+}
+
+ul > li::marker {
+  font-size: 1.4rem;
+  color: #61DAFB;
+}

@@ -5,11 +5,10 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
-    <Header />
-    <h1> Welcome to React world</h1>
-    <List />
-    <Footer />
+    <div className="container">
+      <Header />
+      <List />
+      <Footer />
     </div>
   );
 }
