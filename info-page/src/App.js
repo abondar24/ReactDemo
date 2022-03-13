@@ -1,6 +1,6 @@
-import Header from './Header';
-import Footer from './Footer';
-import List from './List';
+import Header from './components/Header';
+import List from './components/List';
+import Footer from './components/Footer';
 
 
 function App() {
