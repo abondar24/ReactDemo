@@ -23,3 +23,9 @@ section {
 .gray {
   color: #918E9B
 }
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  overflow: scroll;
+}
