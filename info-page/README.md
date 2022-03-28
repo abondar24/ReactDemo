@@ -3,30 +3,15 @@
 Dummy static page with React.
 
 
-## Run
+## Build and run
 
-- Dev server
-```
-npm run start
 
-```
+### `npm start`
 
-Access via localhost:300
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- Production build
 
-```
- npm run build
-```
+### `npm run build`
 
-- Tests
-
-```
- npm run test
-```
-
-- Eject
-
-```
-npm run eject
-```
+Builds the app for production to the `build` folder.
