@@ -1,20 +1,20 @@
-.hero-section {
+.heading-section {
   display: flex;
   flex-direction: column;
 }
 
-.hero-grid {
+.heading-grid {
   max-width: 600px;
   align-self: center;
 }
 
-.hero-header {
+.heading-header {
    margin-bottom: 16px;
    align-self: center;
 }
 
 
-.hero-text {
+.heading-text {
   margin-top: 0;
   align-self: center;
 }
