@@ -24,3 +24,13 @@
 main {
   padding: 36px;
 }
+
+.meme-image {
+  max-width: 100%;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
+
+}
