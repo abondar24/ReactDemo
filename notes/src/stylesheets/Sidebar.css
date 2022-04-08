@@ -1,0 +1,25 @@
+.title {
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-delete {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.title:hover .title-delete {
+    display: none;
+}
+
+.editor {
+    width: 80%;
+    height: 100vh;
+}
+
