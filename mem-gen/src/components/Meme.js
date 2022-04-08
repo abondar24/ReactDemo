@@ -28,7 +28,7 @@ export default function Meme() {
 
     fetch("https://api.imgflip.com/get_memes")
       .then(res => res.json())
-      .then(data => data.data.memes)
+      .then(data => setAllMemes(data.data.memes))
 
   
   }, [])
