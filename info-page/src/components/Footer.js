@@ -1,8 +1,8 @@
 import '../stylesheets/Footer.css';
 
-function Footer (){
+function Footer (props){
   return (
-    <footer>
+    <footer className={props.lightMode ? "light" : ""}>
       <small>Copyright (c) 2022 Experimental development </small>
     </footer>
 

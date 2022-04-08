@@ -1,12 +1,23 @@
 footer {
    text-align: center;
+   background-color: #282D35;
    position: absolute;
    bottom: 0;
    width: 100%;
    height: 2.5rem;  
 }
 
+footer.light {
+  background-color: white;
+}
+
+
 small {
-  color: white;
+  color: #ffffff;
   font-size: 19px;
+}
+
+footer.light small{
+  color: #282D35;
+  
 }
