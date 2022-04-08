@@ -2,9 +2,6 @@
 
 Dummy meme generator
 
-## Available Scripts
-
-In the project directory, you can run:
 
 ## Build and run
 
