@@ -1,30 +1,38 @@
-.list {
+#list {
   padding: 57px 27px;
-  color: white;
   background-image: url(../images/react-logo-large.png);
   background-repeat: no-repeat;
-  background-position: right 75%;
+  background-position: right center;
+  background-color: #282D35;
+  flex: 1 1 auto;
+  color: #FFFFFF;
+}
 
+#list.light {
+  background-color:white;
+  background-image: url(../images/react-logo-large.png);
+  color: #282D35;
 }
 
 .list-header {
   margin: 0;
   font-size: 39px;
   letter-spacing: -0.05em;
-  font-style: normal;
-
+ 
 }
 
-ul {
+
+.list-facts {
   margin-top: 46px;
+  max-width: 400px;
 }
 
-ul > li {
+.list-facts > li {
   line-height: 19px;
-  padding-block: 5px;
+  padding-block: 10px;
 }
 
-ul > li::marker {
+.list-facts > li::marker {
   font-size: 1.4rem;
   color: #61DAFB;
 }
