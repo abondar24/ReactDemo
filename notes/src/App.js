@@ -8,7 +8,7 @@ import Split from "react-split"
 
 
 function App() {
-  
+
   const [notes, setNotes] = React.useState(() => JSON.parse(localStorage.getItem("notes")) || [])
   const [currentNoteId, setCurrentNoteId] = React.useState((notes[0] && notes[0].id) || "")
 
@@ -27,9 +27,20 @@ function App() {
   }
 
   function updateNote(text) {
-    setNotes(oldNotes => oldNotes.map(oldNote => {
-      return oldNote.id === currentNoteId ? { ...oldNote, body: text } : oldNote
-    }))
+    // we put recently update to the top
+    setNotes(oldNotes => {
+      const newNotes = []
+      for (let i = 0; i < oldNotes.length; i++) {
+        if (oldNotes[i].id === currentNoteId) {
+          newNotes.unshift({ ...oldNotes[i], body: text })
+        } else {
+          newNotes.push(oldNotes[i])
+        }
+      }
+
+      return newNotes
+    })
+
   }
 
   function findCurrentNote() {
