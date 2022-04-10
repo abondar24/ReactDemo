@@ -1,0 +1,13 @@
+.item>h3 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.item>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 400px;
+}

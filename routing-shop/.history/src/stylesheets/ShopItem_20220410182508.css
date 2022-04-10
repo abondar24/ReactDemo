@@ -1,0 +1,23 @@
+.item {
+    top: 50%;
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+   
+}
+
+
+.item-image {
+    max-width: 100%;
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+}
+
+.it-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
