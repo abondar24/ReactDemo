@@ -1,6 +1,6 @@
 # Notes 
 
-Markdown notes
+Markdown notes with some additional properties and state staff.
 
 
 ## Build and run

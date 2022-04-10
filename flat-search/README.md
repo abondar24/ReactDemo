@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Tiny flat search page.
+Tiny flat search page using react properties.
 
 ## Build and run
 

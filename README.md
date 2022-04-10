@@ -8,3 +8,4 @@ Bunch of React JS demos based on Scrimba react course
 - [Meme Generator](mem-gen/README.md)
 - [Notes](notes/README.md)
 - [Tenzies](tenzies/README.md)
+- [Routing Shop](routing-shop/README.md)

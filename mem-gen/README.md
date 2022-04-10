@@ -1,6 +1,6 @@
 # Meme generator
 
-Dummy meme generator
+Dummy meme generator using hooks and state for working with remote api.
 
 
 ## Build and run

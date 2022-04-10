@@ -1,6 +1,6 @@
 # InfoPage
 
-Dummy static page with React.
+Dummy static page with React showing come cool CSS and themes changing.
 
 
 ## Build and run
