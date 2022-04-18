@@ -8,7 +8,6 @@ import "../stylesheets/CartItem.css"
 function CartItem(props){
 
     const dispatch = useDispatch();
-    const total = 0;
     
     function addToCart(){
         const id = props.id;
@@ -28,7 +27,7 @@ function CartItem(props){
     function removeFromCart(){
         const id = props.id;
         dispatch(
-            cartActions.removeFromCart(id)
+            cartActions.removeFromCart({id})
         );
     }
 
@@ -36,9 +35,9 @@ function CartItem(props){
     return (
         <div className="cart-item">
             <h2>{props.name}</h2>
-            <p>${props.price}</p>
+            <p>${props.price}/-</p>
             <p>x{props.quantity}</p>
-            <p>Total ${total}</p>
+            <p>Total ${props.total}</p>
             <button className="cart-item-actions" onClick={removeFromCart}>
                 -
             </button>
