@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { notificationActions } from "./notification-slice";
 
 const cartSlice = createSlice({
     name: 'cart',
@@ -52,6 +53,43 @@ const cartSlice = createSlice({
 })
 
 
+export const  sendCardData = (cart)=> {
+    return async (dispatch) => {
+        const sendRequest = async () => {
+            dispatch(notificationActions.showNotification({
+                open: true,
+                message: "Sending request",
+                type: 'warning'
+            }));
+
+            const resp = await fetch(
+                "https://shoppingcart-a62bb-default-rtdb.europe-west1.firebasedatabase.app/cartItems.json",
+                {
+                    method: "PUT",
+                    body: JSON.stringify(cart)
+                });
+
+            const data = await resp.json;
+
+            dispatch(notificationActions.showNotification({
+                open: true,
+                message: "Data sent succesfully",
+                type: 'success'
+            }));
+        }
+
+        try {
+            await sendRequest()
+        } catch (err) {
+            dispatch(notificationActions.showNotification({
+                open: true,
+                message: "Error sending data",
+                type: 'error'
+              }));
+        }
+    }
+}
+
 export const cartActions = cartSlice.actions
 
-export default cartSlice;
+export default cartSlice
