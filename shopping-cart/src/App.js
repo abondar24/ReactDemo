@@ -1,7 +1,14 @@
+import {useSelector,useDispatch} from 'react-redux'
+import {actions} from './store/index'
+import Login from './components/Login'
 
 function App() {
+
+ 
   return (
-    <h1>Shopping Cart</h1>
+    <div>
+      <Login/>  
+    </div>
   );
 }
 
