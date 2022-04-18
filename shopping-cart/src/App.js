@@ -1,15 +1,17 @@
-import {useSelector,useDispatch} from 'react-redux'
-import {actions} from './store/index'
-import Login from './components/Login'
-import Layout from './components/Layout';
+import { useSelector, useDispatch } from "react-redux"
+import { actions } from "./store/index"
+import Login from "./components/Login"
+import Layout from "./components/Layout";
 
 function App() {
 
- 
+  const isLoggedIn = useSelector(state => state.login.isLoggedIn);
+
   return (
     <div>
-      {/* <Login/>   */}
-      <Layout />
+      {!isLoggedIn && <Login />}
+      {isLoggedIn && <Layout/>}
+     
     </div>
   );
 }
