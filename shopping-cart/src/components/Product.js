@@ -8,7 +8,6 @@ function Product(props) {
 
     const dispatch = useDispatch();
     const items = useSelector((state)=> state.cart.items);
-    console.log(items);
     
     function addToCart() {
         const name = props.name;
