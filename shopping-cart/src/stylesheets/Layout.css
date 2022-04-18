@@ -1,0 +1,21 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.layout-price {
+    text-align: right;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    margin-top: 1rem;
+    font-size: 20px;
+}
+
+.layout-order {
+    border: none;
+    width: 10%;
+    padding: 10px;
+    color: white;
+    background-color: brown;
+}
