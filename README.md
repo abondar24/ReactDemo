@@ -9,3 +9,4 @@ Bunch of React JS demos based on Scrimba react course
 - [Notes](notes/README.md)
 - [Tenzies](tenzies/README.md)
 - [Routing Shop](routing-shop/README.md)
+- [Shopping cart](shopping-cart/README.md)
