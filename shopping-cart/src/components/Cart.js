@@ -1,11 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "../stylesheets/Cart.css"
 
 function Cart(){
-   const quantity = 0; 
+   const total = useSelector(state => state.cart.itemsTotal); 
    return (
        <div className="cart">
-           <h3> Cart: {quantity} Items</h3>
+           <h3> Cart: {total} Items</h3>
        </div>
    )
 }
