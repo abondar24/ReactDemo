@@ -1,20 +1,25 @@
 import React from "react";
 import "../stylesheets/Layout.css"
-import Header from "./Header" 
+import Header from "./Header"
+import ProductList from "./ProductList";
 
-function Layout (){
+function Layout() {
     let total = 100;
 
     return (
-        <div className="layout">
-            <Header />
-            <div className="layout-price">
-                <h3>Total: ${total}</h3>
-                <button className="layout-order">Order</button>
+        <React.Fragment>
+            <div className="layout">
+                <Header />
+                <ProductList />
+                <div className="layout-price">
+                    <h3>Total: ${total}</h3>
+                    <button className="layout-order">Order</button>
+                </div>
             </div>
-        </div>
+        </React.Fragment>
+
     )
-} 
+}
 
 
 export default Layout;
