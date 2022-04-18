@@ -12,7 +12,7 @@ const loginSlice = createSlice({
           state.isLoggedIn = false; 
         }
     }
-})
+});
 
 export const loginActions = loginSlice.actions;
 export default loginSlice;

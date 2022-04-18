@@ -15,7 +15,7 @@ const notificationSlice = createSlice({
          }
      }
 
-})
+});
 
 export const notificationActions = notificationSlice.actions;
 

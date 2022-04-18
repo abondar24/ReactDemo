@@ -1,12 +1,10 @@
 import { useSelector, useDispatch } from "react-redux"
-import { actions } from "./store/index"
 import Login from "./components/Login"
 import Layout from "./components/Layout";
 import { useEffect } from "react";
 import Notification from "./components/Notification";
-import { notificationActions } from "./store/notification-slice";
-import { sendCardData } from "./store/cart-slice";
 
+import { fetchCartData, sendCartData } from "./store/cart-action";
 
 let isFirstRender = true
 function App() {
@@ -16,15 +14,24 @@ function App() {
   const dispatch = useDispatch();
   const notification = useSelector(state => state.notification.notification)
 
+
+   useEffect(()=>{
+     dispatch(fetchCartData())
+   },[dispatch]);
+
+
   useEffect(() => {
 
     if (isFirstRender) {
-      isFirstRender = false
+      isFirstRender = false;
       return;
     }
 
-    dispatch(sendCardData(cart));
-  }, [cart]);
+    if (cart.changed){
+      dispatch(sendCartData(cart));
+    }
+   
+  }, [cart,dispatch]);
 
   return (
     <div>

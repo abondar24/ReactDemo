@@ -1,18 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { notificationActions } from "./notification-slice";
+
 
 const cartSlice = createSlice({
     name: 'cart',
     initialState: {
         items: [],
         itemsTotal: 0,
-        showCart: false
+        showCart: false,
+        changed: false
     },
-
 
     reducers: {
         addToCart(state, action) {
+            state.changed = true;
             const newItem = action.payload;
+           
 
             const existingItem = state.items.find((item) => item.id === newItem.id);
 
@@ -34,8 +36,9 @@ const cartSlice = createSlice({
 
         },
         removeFromCart(state, action) {
+            state.changed = true;
             const id = action.payload.id;
-
+          
             const existingItem = state.items.find((item) => item.id === id);
             if (existingItem.quantity === 1) {
                 state.items = state.items.filter(item => item.id !== existingItem.id)
@@ -48,47 +51,14 @@ const cartSlice = createSlice({
         },
         setShowCart(state) {
             state.showCart = !state.showCart;
+        },
+        replaceData(state,action) {
+            state.itemsTotal =  action.payload.totalPrice;
+            state.items = action.payload.items;
         }
     }
-})
+});
 
-
-export const  sendCardData = (cart)=> {
-    return async (dispatch) => {
-        const sendRequest = async () => {
-            dispatch(notificationActions.showNotification({
-                open: true,
-                message: "Sending request",
-                type: 'warning'
-            }));
-
-            const resp = await fetch(
-                "https://shoppingcart-a62bb-default-rtdb.europe-west1.firebasedatabase.app/cartItems.json",
-                {
-                    method: "PUT",
-                    body: JSON.stringify(cart)
-                });
-
-            const data = await resp.json;
-
-            dispatch(notificationActions.showNotification({
-                open: true,
-                message: "Data sent succesfully",
-                type: 'success'
-            }));
-        }
-
-        try {
-            await sendRequest()
-        } catch (err) {
-            dispatch(notificationActions.showNotification({
-                open: true,
-                message: "Error sending data",
-                type: 'error'
-              }));
-        }
-    }
-}
 
 export const cartActions = cartSlice.actions
 
