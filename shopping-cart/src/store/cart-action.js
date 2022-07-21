@@ -44,7 +44,7 @@ export const fetchCartData = () => {
         const fetchHandler = async () => {
             const resp = await fetch("https://shoppingcart-a62bb-default-rtdb.europe-west1.firebasedatabase.app/cartItems.json")
             const data = await resp.json();
-            return data;
+            
         }
 
         try {

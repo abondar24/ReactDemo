@@ -20,7 +20,6 @@ const productSlice = createSlice({
                 
                 products.push(product)
             }
-            console.log(products)
             state.products = products;
         }
     }
