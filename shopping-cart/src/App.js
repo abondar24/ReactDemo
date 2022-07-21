@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Notification from "./components/Notification";
 
 import { fetchCartData, sendCartData } from "./store/cart-action";
+import {fetchProducts} from "./store/product-action";
 
 let isFirstRender = true
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
    useEffect(()=>{
      dispatch(fetchCartData())
+     dispatch(fetchProducts())
    },[dispatch]);
 
 
@@ -30,7 +32,7 @@ function App() {
     if (cart.changed){
       dispatch(sendCartData(cart));
     }
-   
+ 
   }, [cart,dispatch]);
 
   return (

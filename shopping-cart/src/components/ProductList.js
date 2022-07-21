@@ -1,11 +1,14 @@
 import React from "react"
 
-import products from "../products.js"
 import Product from "./Product"
 import "../stylesheets/ProductList.css"
+import { useSelector } from "react-redux";
 
 function ProductList() {
 
+     let products = useSelector(state => state.product.products);
+   
+     
     const renderedProducts = products.map((product, id) => (
         <li key={id}>
             <Product
